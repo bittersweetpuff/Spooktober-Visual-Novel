@@ -16,16 +16,16 @@ image helen normal = "images/characters/helen.png"
 # The game starts here.
 
 label start:
-    call inintialize_variables
+    call inintialize_variables from _call_inintialize_variables
 
-    call demo
+    #call demo
 
-    call opening_scene
+    call opening_scene from _call_opening_scene
     
     return
 
 label inintialize_variables:
-    call initialize
+    call initialize from _call_initialize
     define spooks_encountered = 0
     define robert_statatus = "away"
     define tyrone_statatus = "away"
