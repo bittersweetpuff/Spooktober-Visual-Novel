@@ -125,6 +125,67 @@ label opening_scene:
 
 label room_scene:
 
+    "You enter your room, throw yourself on bed."
+
+    b "Damn, that was a long week."
+
+    "You hear your phone buzzing. You quickly check it out just to see a text from Bradley"
+
+    "\"Sup' Bianca. You home?\""
+
+    "You quickly text him back \"Yeah... btw how are you? I haven't seen you in the school today.\""
+
+    "\"Well... something came up. Im fine tho\" - he texts you back almost instantly"
+
+    "\"Good to know\" - you type back"
+
+    "Now when you think of it, Bradley is last person who would skip the school for any other reason than severe illness."
+
+    "You hear message notification again."
+
+    "\"Anyway, you heard about party at Stacy Glow's place? Her parents are out for a weekend so she is throwing a halloween party. Wonna come?\""
+
+    "You answer: \"I'd love too but my parents kinda dont want me to go for the parties after the last time.\""
+
+    "You got a response almost instantly."
+
+    menu:
+        "\"What hapened last time?\""
+
+        "\"I took some bad internet advice on not getting drunk\"":
+            "\"I took some bad internet advice on not getting drunk and it... well didn't work as intended. I should've known better. So yeah. Im kinda dumb.\" - you reply"
+            "Bradley anwserws: \"Well yeah, that sucks\""
+            call decrease_smarts
+
+        "\"Shouldn't have been hitting on others when drunk.\"":
+            "\"Shouldn't have been hitting on others when drunk. That was so cringe. I dont really want to embarrass myself again\" - you reply"
+            "Bradley anwserws: \"Oh... nothing's worse than booze endorsed heartbreak\""
+            "\"More like booze endorsed meltdown.\""
+            call decrease_charm
+
+        "\"I got really mean while drunk.\"":
+            "\"I got really mean while drunk and I don't want to ruin any more friendships because of that.\" - you reply"
+            "Bradley anwserws: \"That's the tough one to handle.\""
+            call decrease_empathy
+
+    "But to be honest, you feel like going on a party is a good idea. At least it is some way to stress out after this whole week."
+
+    "You quickly text Bradley: \"Okay... I guess a little party never killed nobody. I'll get ready in like... 10 minutes.\""
+
+    "\"Ok, I'll be waiting in front of your house\" - you get as reply."
+
+    "\"Great. See you there\" - you type back and throw your phone into your bag. You change your clothes and do your best to fix your hair."
+
+    "After a chaotic 20 minutes you look in a mirror."
+
+    show bianca normal at center1
+
+    b "Looking good girl!"
+
+    "You hear a doorbell ringing. It must be Bradley. You grab your bag and leave your house."
+
+    call meeting_bradley
+
     return
 
 
