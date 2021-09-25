@@ -20,7 +20,9 @@ label start:
 
     #call demo
 
-    call opening_scene from _call_opening_scene
+    #call opening_scene from _call_opening_scene
+
+    call meeting_bradley
     
     return
 
