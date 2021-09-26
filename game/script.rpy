@@ -12,17 +12,19 @@ image bianca normal = "images/characters/bianca.png"
 image bradley normal = "images/characters/bradley.png"
 image helen normal = "images/characters/helen.png"
 
+image bg room = "images/backgrounds/bg_room.png "
+
 
 # The game starts here.
 
 label start:
     call inintialize_variables from _call_inintialize_variables
 
-    #call demo
+    call demo
 
     #call opening_scene from _call_opening_scene
 
-    call meeting_bradley
+    #call meeting_bradley
     
     return
 

@@ -125,6 +125,8 @@ label opening_scene:
 
 label room_scene:
 
+    scene bg room with dissolve
+
     "You enter your room, throw yourself on bed."
 
     b "Damn, that was a long week."
