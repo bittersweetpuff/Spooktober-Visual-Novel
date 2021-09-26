@@ -1,5 +1,5 @@
 label park_sounds:
-    scene
+    scene bg park with dissolve
     "As you walk through the park Helen starts looking around."
 
     show helen normal at center1

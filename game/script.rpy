@@ -16,6 +16,10 @@ image robert normal = "images/characters/robert.png"
 
 image bg room = "images/backgrounds/bg_room.png"
 image bg parking = "images/backgrounds/bg_parking.png"
+image bg outside = "images/backgrounds/bg_outside.png"
+image bg park = "images/backgrounds/bg_park.png"
+image bg forest = "images/backgrounds/bg_las_01.png"
+image bg deepforest = "images/backgrounds/bg_forest_02.png"
 
 # The game starts here.
 
@@ -26,9 +30,9 @@ label start:
 
     #call opening_scene from _call_opening_scene
 
-    #call meeting_helen
+    call cat_sighted
     #call park_sounds
-    call forest_screams
+    #call forest_screams
     return
 
 label inintialize_variables:

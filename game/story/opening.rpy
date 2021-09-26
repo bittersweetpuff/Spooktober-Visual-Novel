@@ -3,6 +3,7 @@ define dad = Character("Father")
 define mom = Character("Mother")
 
 label opening_scene:
+    scene bg outside with dissolve
 
     "Friday, October 31th"
 
@@ -181,6 +182,7 @@ label room_scene:
     "After a chaotic 20 minutes you look in a mirror."
 
     show bianca normal at center1
+    with dissolve
 
     b "Looking good girl!"
 

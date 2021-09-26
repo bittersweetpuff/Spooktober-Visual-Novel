@@ -1,5 +1,5 @@
 label meeting_bradley:
-    scene
+    scene bg outside with dissolve
 
     "You lock you house's door and see Bradley in a driveway."
 
@@ -188,10 +188,11 @@ label cat_sighted:
             with dissolve
 
             "You countinue walking."
+            call meeting_helen
         
         "Let's take a closer look.":
             call cat_encountered
-return
+    return
 
 label cat_encountered:
 
@@ -256,7 +257,7 @@ label cat_encountered:
             hide bradley normal
             with dissolve
 
-call meeting_helen
+    call meeting_helen
 
 return
 

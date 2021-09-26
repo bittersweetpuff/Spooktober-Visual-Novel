@@ -1,5 +1,5 @@
 label forest_screams:
-    scene
+    scene bg forest with dissolve
 
     "Bradley aproaches you."
 
