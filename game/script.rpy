@@ -6,11 +6,13 @@
 define b = Character("Bianca")
 define by = Character("Bradley")
 define h = Character("Helen")
+define r = Character("Robert")
 
 
 image bianca normal = "images/characters/bianca.png"
 image bradley normal = "images/characters/bradley.png"
 image helen normal = "images/characters/helen.png"
+image robert normal = "images/characters/robert.png"
 
 image bg room = "images/backgrounds/bg_room.png"
 image bg parking = "images/backgrounds/bg_parking.png"
