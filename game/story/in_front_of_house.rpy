@@ -139,7 +139,129 @@ label meeting_bradley:
 
     b "Haha! Maybe you're right."
     
+    hide bianca normal
+    with dissolve
 
+    hide bradley normal
+    with dissolve
+
+    call cat_sighted
         
 
     return
+
+label cat_sighted:
+
+    "You continue walking for a couple of minutes."
+
+    "For a halloween evening it is surprisingly quiet. Only a couple of kids trick or treating and some party going teenagers. Nothing special."
+
+    "Suddenly, Bradley stops and starts looking somewhere."
+
+    show bradley normal at left2
+    with dissolve
+
+    by "See that?"
+
+    show bianca normal at right2
+    with dissolve
+
+    b "What."
+
+    "He points his finger at an old looking black cat covered in scars."
+
+    b "Nice cat. Looks like one hell of a warrior."
+
+    
+
+    menu:
+        by "Doesn't it look a bit weird to you?"
+
+        "That's just a cat.":
+            b "Nah. That's just some old cat. Come on we have a party to attend."
+            
+
+            hide bianca normal
+            with dissolve
+            by "Well if you say so..."
+            hide bradley normal
+            with dissolve
+
+            "You countinue walking."
+        
+        "Let's take a closer look.":
+            call cat_encountered
+return
+
+label cat_encountered:
+
+    $ spooks_encountered = spooks_encountered + 1
+
+    "You get closer to the cat. From there you can see its red eyes staring at you."
+
+    menu:
+        "The cat is surprisingly calm."
+
+        "<Empathy> Try to pet him":
+            if stats.stats['empathy'] >= 3:
+                "<SUCCESS> The cat allows you to pet itself. It starts purring."
+                b "Aw... Good kitty."
+                "Bradley also gets closer."
+                by "Hey kitty..."
+                "The cat hisses at him and starts running away."
+            else:
+                "<FAILURE> The cat hisses at you and starts running away."
+
+        "\"Hey mr. Cat\"":
+            b "Hello there mr. Cat. How are you doing?"
+            "Cat is keep staring at you with question in its eyes."
+            "Bradley also gets closer."
+            by "Hey kitty..."
+            "The cat hisses at him and starts running away."
+    by "Hey come back here."
+
+    hide bradley normal
+    with dissolve
+
+    "Bradley starts chasing a cat."
+
+    menu:
+        by "Come on Bianca, it's going to escape."
+
+        "<FITNESS> Try to catch it.":
+            hide bianca normal
+            with dissolve
+            if stats.stats['fitness'] >= 4:
+                "<SUCCESS> You dash after the running cat and close distance in a couple of seconds. You catch it with swift movement."
+                "It starts hissing and scratches you so you let it go."
+                "It continue running away and after couple seconds disappears in a night."
+
+            else:
+                "<FAILURE> You just can't keep up with the cat."
+                "It continue running away and after couple seconds disappears in a night."
+            b "You don't seem to like me that much huh?"
+            by "Don't worry Bianca, this cat was weird. Lets go."
+
+        "\"Go get him hunter!\"":
+            "You start cheering for Bradley"
+            b "Go get him hunter!"
+            "Bradley sadly can't keep up with a cat who disappears in a night."
+            show bradley normal at left2
+            with dissolve
+            by "Stupid cat."
+            b "Don't blame it. It just got scared."
+            by "Maybe... Nevermind, lets go."
+            hide bianca normal
+            with dissolve
+            hide bradley normal
+            with dissolve
+
+call meeting_helen
+
+return
+
+
+
+        
+
+
