@@ -27,7 +27,8 @@ label start:
     #call opening_scene from _call_opening_scene
 
     #call meeting_helen
-    call park_sounds
+    #call park_sounds
+    call forest_screams
     return
 
 label inintialize_variables:

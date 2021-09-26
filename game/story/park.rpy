@@ -261,5 +261,11 @@ label meeting_robert:
     
     hide bianca normal
     with dissolve
+
+    "You leave a park and take shortcut through the forest."
+
+    call forest_screams
+
+    return
         
 
