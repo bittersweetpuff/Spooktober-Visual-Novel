@@ -248,7 +248,7 @@ label meeting_robert:
 
     b "We're going on the same party."
 
-    r "You're kinda right."
+    r "..."
 
     b "So? Wonna join?"
 

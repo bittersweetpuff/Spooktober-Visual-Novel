@@ -147,4 +147,146 @@ label tracks_spook:
     return
 
 label meeting_tyrone:
+
+    "You your walk through the forest."
+
+    show bradley normal at left2
+    with dissolve
+
+    by "Damn, what an evening."
+    by "At this point I'm wondering what will happend next."
+
+    show bianca normal at right2
+    with dissolve
+    if spooks_encountered == 0:
+        b "Oh, It isn't so bad."
+        b "Sure, some weird stuff is happening around us but nothing special."
+        b "You're just worring to much."
+        by "Maybe you're right."
+
+    else:
+        b "Yeah... too many spooky shit for one night if you ask me."
+        by "Good to feel that I'm not alone in that thought."
+
+    b "Bradley, I'm really worried about you. Really. If you need to talk, we can ditch this party and just hang out somewhere."
+    by "Thanks, but that would be stupid. At the end of the day, I was the one that dragged you here."
+    b "Oh come on... thanks to dragging me here. I needed it."
+    "Bradley's mood seems to getting better and better every second."
+
+    h "HEY BIANCA. COME HERE."
+    "Helen Is waving at you, showing you to come to her."
+    hide bradley normal
+    with dissolve
+    hide bianca normal
+    with dissolve
+
+    show robert normal at right3
+    with dissolve
+
+    show helen normal at left3
+    with dissolve
+
+    r "Come on. How many people am I gonna encounter tonight?"
+    h "Stop whining."
+    r "And out of all people it have to be this dickhead?"
+    h "Shut up, Robert."
+    show bianca normal at center3
+    with dissolve
+    b "Hey, what's up?"
+    "Helen points her finger at a silhouette sitting next to one of the threes."
+    "You see a tall guy sitting next to the beer keg and drinking from a can of light beer."
+    b "Is that..."
+    r "...Tyrone McNamara. Yeah. Biggest damn idiot in the whole school. Probably becouse of brain damage he suffered while playing football or something."
+    h "Is there someone you don't hate?"
+    r "Shut up."
+    "Helen rolls her eyes."
+    b "Oh come on Robbie. I know him. He's not that bad."
+    hide bianca normal with dissolve
+    r "Don't tell me she'll invite him to join as well."
+    h "Well, she is a social butterfly afterall."
+
+    hide robert normal with dissolve
+    hide helen normal with dissolve
+
+    show tyrone normal at right2
+    with dissolve
+
+    t "Why am I the one carrying this."
+
+    show bianca normal at left2
+    with dissolve
+
+    b "Oh, poor unfortunate soul. Who made you do this?"
+
+    t "Oh shit! Bianca!"
+
+    "Tyrone throws half finished beer can in bushes."
+
+    b "Tell me big guy. Does your coach know you drink this stuff?"
+
+    "You point at bushes."
+
+    t "Oh come on girl. That's just a beer. Everybody is drinking that."
+
+    b "You got point, but not everybody is Cloudvale High Butchers running back."
+
+    t "Oh..."
+
+    "Tyrone seems happy about that comment."
+
+    b "I think I may be worried about our star player. Right?"
+
+    t "Haha! Yeah girl. You should be."
+
+    "He stops laughing and looks at you with serious face."
+
+    menu:
+        t "You won't report me to the coach, right?"
+
+        "<CHARM> I have a soft spot for bad boys":
+            b "I have a soft spot for bad boys you know?"
+            if stats.stats["charm"] >= 2:
+                t "<SUCCESS> Damn girl, you're a lucky one."
+                t "You have one right here."
+                b "Im flattered."
+            else:
+                t "<FAILURE> Ugh.. I have no idea what are you talking about."
+                b "..."
+                b "Whatever..."
+
+        "Maybe":
+            b "Maybe..."
+            t "Oh come on. Don't be such a bitch."
+            b "Chill out. We are going on a party. I was joking."
+            t "Oh..."
+            "Tyrone seems confused."
+        
+    t "So you guys are going to Stacy's as well?"
+    b "What else would be doing in a forest this late."
+    t "I have no idea what weird hobbies you guys have."
+    "He points at Robert."
+    t "Especially this guy."
+    hide bianca normal with dissolve
+
+    show robert normal at left2
+    with dissolve
+
+    r "Shut up!"
+
+    t "Chill out my dude. There's no reason to be upset you know? Grab this."
+
+    "Tyrone puts keg in Robert's arms."
+
+    t "We're almost there. I think you can manage."
+
+    hide tyrone normal with dissolve
+
+    r "Wha.. Hey..."
+    r "..."
+    r "...whatever."
+
+    hide robert normal with dissolve
+
+    call forest_sillhouette
+
     return
