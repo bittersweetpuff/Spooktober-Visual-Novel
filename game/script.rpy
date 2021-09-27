@@ -32,7 +32,7 @@ label start:
 
     #call opening_scene from _call_opening_scene
 
-    call meeting_tyrone
+    call effigy_spook
     #call park_sounds
     #call forest_screams
     return

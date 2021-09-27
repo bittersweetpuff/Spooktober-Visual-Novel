@@ -148,7 +148,7 @@ label tracks_spook:
 
 label meeting_tyrone:
 
-    "You your walk through the forest."
+    "You continue your walk through the forest."
 
     show bradley normal at left2
     with dissolve
@@ -287,6 +287,196 @@ label meeting_tyrone:
 
     hide robert normal with dissolve
 
-    call forest_sillhouette
+    call forest_silhouette
 
+    return
+
+label forest_silhouette:
+
+    "The party continues its journey through the woods."
+
+    show helen normal at left3
+    with dissolve
+
+    h "It kinda feels like D&D session if you ask me."
+
+    show bianca normal at center3
+    with dissolve
+
+    b "Why?"
+
+    h "You know... Group of characters, recruiting new party members..."
+
+    b "Where are the enemies them?"
+
+    h "They should show up soon. We're probably gonna face some rats sooner or later."
+
+    b "Ugh... I hate rats."
+
+    h "Oh come on. Rats are cool."
+
+    show tyrone normal at right3
+    with dissolve
+
+    t "Yo guys. Have you seen that?"
+
+    "He points at darkness between trees."
+
+    h "I don't see anything."
+
+    b "Me neither."
+
+    menu:
+        t "I swear I saw someone."
+
+        "Just ignore it":
+            b "Maybe, but we are almost there. Lets ignore it and just go to this party."
+            b "Im tierd."
+
+            hide bianca normal with dissolve
+            hide helen normal with dissolve
+
+            t "But I really..."
+            t "Uh.. nevermind."
+
+            hide tyrone normal with dissolve
+
+            call calculate_early_ending
+
+        "Lets check it out.":
+            b "Well, if you say so... lets check it. Out."
+
+            hide bianca normal with dissolve
+            hide tyrone normal with dissolve
+
+            h "I'll wait with Robert and Bradley!"
+
+            hide helen normal with dissolve
+
+            call effigy_spook
+
+    return
+
+label effigy_spook:
+
+    $ spooks_encountered = spooks_encountered+1
+
+    "You and Tyrone looking for mysterious person he saw."
+
+    show bianca normal at left2
+    with dissolve
+
+    b "Are you sure it was here?"
+
+    show tyrone normal at right2
+    with dissolve
+
+    t "Yeah. For sure."
+
+    b "Let's just search around and don't make the rest wait for too long."
+
+    t "Good idea girl."
+
+    hide tyrone normal with dissolve
+    hide bianca normal with dissolve
+
+    "You look around with no result."
+
+    "Finally you find something that may have looked like a human silhouette."
+
+    show bianca normal at left2
+    with dissolve
+
+    "You look at a human sized effigy, looking similar to a scarecrow. It has dark hairs, blue jacket, black t-shirt and white scarf."
+
+    b "Okay, thats super spooky."
+
+    "You hear Tyrone yelling."
+
+    t "YO!"
+
+    t "ANYBODY HERE?"
+
+    b "Tyrone! Shut up and come here."
+
+    show tyrone normal at right2
+    with dissolve
+
+    "Tyrone joins you and looks at a scarecrow"
+
+    t "What the..."
+
+    b "Yeah... who would put scarecrow in a middle of the forest?"
+
+    t "I have no idea... really."
+
+    t "Maybe someone dumped unwanted halloween decoration here."
+
+    b "I would love to belive that but look at it's clothing."
+
+    t "Oh shit! It looks like..."
+
+    b "Exactly."
+
+    t "Better return to the rest."
+
+    b "Yeah. The faster we get out of this forest the better."
+
+    hide tyrone normal with dissolve
+    hide bianca normal with dissolve
+
+    "You return to Helen and the rest."
+
+    "Bradley approaches you."
+
+    show bradley normal at left2
+    with dissolve
+
+    by "Have you found anything?"
+
+    show bianca normal at right2
+    with dissolve
+
+    b "Yeah, just some weird human sized doll. Creepy but nothing to write home about."
+
+    by "Thats great to know. Now come on. We're gonna be late."
+
+    by "... Is something wrong? You seem worried."
+
+    b "It's nothing Im just..."
+
+    menu:
+        by "Huh?"
+
+        "It looked like you":
+            b "This weird scarecrow, doll or whatever thingy looked just like you."
+
+            by "What do you mean."
+
+            b "It was you size, had your clothes... that was really weird."
+
+            "Bradley's face turned pale in a second."
+
+            b "Don't worry. It was just a scarecrow. Lets go!"
+
+        "Nothing, really":
+
+            b "Nothing, really."
+
+            by "Are you sure?"
+
+            b "Yeah. Let's go"
+
+            "Bradley seems relieved."
+
+    hide bradley normal with dissolve
+    hide bianca normal with dissolve
+
+    call getting_lost
+
+    return
+
+
+label getting_lost:
+    "boo"
     return
