@@ -256,4 +256,167 @@ label trap_field:
 
 label barbwire:
 
+    "Few minutes after leaving a trap field you encounter another obstacle."
+
+    show tyrone normal at right2
+    with dissolve
+
+    t "Are we being serious here?"
+
+    show bianca normal at left2
+    with dissolve
+
+    b "Whats wrong?"
+
+    "You don't need to wait for answer. You find yourself in front of a barb wire fence."
+
+    t "Are we really gonna go through this shit?"
+
+    b "Im afraid we may need to."
+
+    t "What kind of weird torture porn bullshit it is."
+
+    hide tyrone normal with dissolve
+
+    show bradley normal at right2
+    with dissolve
+
+    by "I'll go first."
+
+    hide bradley normal with dissolve
+
+    "Bradley slowly but surely makes his way through barb wire."
+
+    "Lucky wires are not really dense."
+
+    show helen normal at right2
+    with dissolve
+
+    h "I guess Im next."
+
+    h "Come on Helen... you can do this."
+
+    hide helen normal with dissolve
+
+    "Helen takes her time but finally makes her way through with no scratch."
+
+    if robert_alive == True:
+
+        show robert normal at right2
+        with dissolve
+
+        r "Ugh... gimmie a break."
+
+        hide robert normal with dissolve
+
+        "In spite of hurt leg, Robert manages to get through."
+
+    show tyrone normal at right2
+    with dissolve
+
+    t "Okay Bianca, you're next."
+
+    b "I guess."
+
+    hide tyrone normal with dissolve
+    hide bianca normal with dissolve
+
+    "You take a deep breath and start to crawl through barb wire."
+
+    b "And I could've stayed home."
+
+    "It feels like eternity, but finally you are on the other side."
+
+    "You look at Tyrone on the other side of fence."
+
+    b "Okay big guy. Be careful."
+
+    "Tyrone start making his way through. Suddenly he stops and yells."
+
+    "You see him slowly getting tangled in barb wire."
+
+    show tyrone normal at center1
+    with dissolve
+
+    "He start panicking."
+
+    t "Shit, shit, shit..."
+
+    b "Tyrone. Calm down. You are making it worse."
+
+    define barb_diff = 4
+
+    menu:
+        t "It hurts!"
+
+        "<CHARM> \"Don't worry. Im here. Just slowly come to me.\"":
+            b "Don't worry. Im here. Just slowly come to me."
+            "Tyrone lookes at you..."
+            if stats.stats["charm"] >= barb_diff:
+                "<SUCCESS> ...and manages to get through."
+                b "Im proud of you big boy."
+                "In spite of his wounds he smiles."
+                t "Thanks for calming me down Bianca."
+                b "No problem."
+            
+            else:
+                "<FAILURE> ...and tries to get through."
+                "He only makes it worse and starts panicing."
+                $ tyrone_alive = False
+        
+        "<SMARTS> Take a look at barb wire.":
+            if stats.stats["smarts"] >= 3:
+                "<SUCCESS> You manage to find a path that should be easier for Tyrone to get through."
+                "You think you can guide him through it."
+                $ barb_diff = 3
+            else:
+                "<FAILURE> But you can't find any easier way."
+            menu:
+                b "Tyrone..."
+
+                "<CHARM> \"Don't worry. Im here. Just slowly come to me.\"":
+                    b "Don't worry. Im here. Just slowly come to me."
+                    "Tyrone lookes at you..."
+                    if stats.stats["charm"] >= barb_diff:
+                        "<SUCCESS> ...and manages to get through using easier path."
+                        b "Im proud of you big boy."
+                        "In spite of his wounds he smiles."
+                        t "Thanks for calming me down Bianca."
+                        b "No problem."
+                    else:
+                        "<FAILURE> ...and tries to get through."
+                        "He only makes it worse and starts panicing."
+                        $ tyrone_alive = False
+
+    if tyrone_alive == False:
+        b "Shit, Tyrone. Stop moving."
+        "Tyrone breathes heavily."
+        b "You're stuck. We'll get help. Just stay calm."
+
+        t "Don't tell me you're gonna leave me here."
+
+        b "What else can we do?"
+
+        "He looks terrified but finally nods."
+
+        t "Okay Bianca. My life is in your hands."
+
+        hide tyrone normal with dissolve
+
+        "You and the rest continue walking with a swift pace leaving Tyrone behind."
+
+    else:
+
+        t "My whole body hurts."
+
+        b "I'm not surprised."
+
+        "You and the rest continue walking with a swift pace."
+
+    call bridge
+
+    return
+
+
+label bridge:
     return
