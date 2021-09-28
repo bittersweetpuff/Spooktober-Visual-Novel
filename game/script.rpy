@@ -24,6 +24,8 @@ image bg outside = "images/backgrounds/bg_outside.png"
 image bg park = "images/backgrounds/bg_park.png"
 image bg forest = "images/backgrounds/bg_las_01.png"
 image bg deepforest = "images/backgrounds/bg_las_02.png"
+image bg witchhosue = "images/backgrounds/bg_chata.png"
+image bg stacy = "images/backgrounds/bg_end_01.png"
 
 # The game starts here.
 
@@ -42,7 +44,7 @@ label start:
 label inintialize_variables:
     call initialize from _call_initialize
     define spooks_encountered = 0
-    define robert_alive = False
-    define tyrone_alive = False
-    define helen_alive = False
+    define robert_alive = True
+    define tyrone_alive = True
+    define helen_alive = True
     return
