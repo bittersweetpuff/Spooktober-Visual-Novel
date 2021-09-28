@@ -487,83 +487,83 @@ label bridge:
 
         hide tyrone normal with dissolve
 
-        if robert_alive == True:
-            "He stands next to Robert."
+    if robert_alive == True:
+        "He stands next to Robert."
 
-        else:
-            "He watches others pass."
+    else:
+        "He watches others pass."
 
-        "Bradley makes it through with little to no problem."
+    "Bradley makes it through with little to no problem."
 
-        show bradley normal at right2
-        with dissolve
+    show bradley normal at right2
+    with dissolve
 
-        by "Watch out Helen. It feels like it's about to snap."
+    by "Watch out Helen. It feels like it's about to snap."
 
-        "Helen, pale as a ghost, starts making her way through bridge."
+    "Helen, pale as a ghost, starts making her way through bridge."
 
-        "She stops in a middle and starts shaking. Then she gets on all fours."
+    "She stops in a middle and starts shaking. Then she gets on all fours."
 
-        hide bianca normal with dissolve
-        hide bradley normal with dissolve
+    hide bianca normal with dissolve
+    hide bradley normal with dissolve
 
-        "You stand on the other side of the bridge."
+    "You stand on the other side of the bridge."
 
-        show helen normal at center1
-        with dissolve
+    show helen normal at center1
+    with dissolve
 
-        h "Shit... I can't. It'll break."
+    h "Shit... I can't. It'll break."
 
-        b "Shut up and come here Helen. Don't you dare to panic."
+    b "Shut up and come here Helen. Don't you dare to panic."
 
-        "You see cracks in planks."
+    "You see cracks in planks."
 
-        define bridge_diff = 4
+    define bridge_diff = 4
 
-        menu:
-            h "Bianca... I can't."
+    menu:
+        h "Bianca... I can't."
 
-            "<CHARM> Come on Helen. You are almost here... Be brave.":
-                call helen_charm_check
-                menu:
-                    "..."
+        "<CHARM> Come on Helen. You are almost here... Be brave.":
+            call helen_charm_check
+            menu:
+                "..."
 
-                    "<TRICKERY> <LIE> The bridge wont break":
-                        call helen_trickery_check
+                "<TRICKERY> <LIE> The bridge wont break":
+                    call helen_trickery_check
 
-                        menu:
-                            "..."
+                    menu:
+                        "..."
 
-                            "Just come to me.":
-                                call come_to_me
-
-
-                    "Just come to me.":
-                        call come_to_me
+                        "Just come to me.":
+                            call come_to_me
 
 
-            "<TRICKERY> <LIE> The bridge wont break":
-                call helen_trickery_check
+                "Just come to me.":
+                    call come_to_me
 
-                menu:
-                    "..."
 
-                    "<CHARM> Come on Helen. You are almost here... Be brave.":
-                        call helen_charm_check
-                        menu:
-                            "..."
+        "<TRICKERY> <LIE> The bridge wont break":
+            call helen_trickery_check
 
-                            "Just come to me.":
-                                call come_to_me
+            menu:
+                "..."
+
+                "<CHARM> Come on Helen. You are almost here... Be brave.":
+                    call helen_charm_check
+                    menu:
+                        "..."
+
+                        "Just come to me.":
+                            call come_to_me
                     
 
-                    "Just come to me.":
-                        call come_to_me
+                "Just come to me.":
+                    call come_to_me
 
 
 
-            "Just come to me.":
-                call come_to_me
+        "Just come to me.":
+            call come_to_me
 
 
     if helen_alive == True:
