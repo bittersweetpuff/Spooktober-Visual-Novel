@@ -32,7 +32,7 @@ label start:
 
     #call opening_scene from _call_opening_scene
 
-    call barbwire
+    call bridge
     #call park_sounds
     #call forest_screams
     return

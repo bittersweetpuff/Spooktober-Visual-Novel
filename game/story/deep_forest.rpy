@@ -419,4 +419,232 @@ label barbwire:
 
 
 label bridge:
+
+    "Not a long time after making it through a barbed wire fence you hear the sound of running water."
+
+    "You come across a river with a couple of planks that create a primitive bridge."
+
+    "Unsurprisingly the \"bridge\" does not look stable at all."
+
+    show bradley normal at right2
+    with dissolve
+    show bianca normal at left2
+    with dissolve
+
+    by "Bianca, take a look."
+
+    "He points at riverbed."
+
+    by "Thats a good 4 meter fall."
+
+    b "Yeah... and current looks strong."
+
+    b "We need to be really careful while passing."
+
+    by "Ladies first."
+
+    b "Shut up."
+
+    hide bradley normal with dissolve
+    hide bianca normal with dissolve
+
+    "You take deep breath and start walking on a bridge."
+
+    "Wood produces an unsettling sound when you step on it."
+
+    b "Don't break, don't break."
+
+    "After couple seconds you are on the other side."
+
+    show bianca normal at left2
+    with dissolve
+
+    "You look at rest."
+
+    if robert_alive == True:
+        "Robert, slowly, makes it through."
+
+        show robert normal at right2
+        with dissolve
+
+        r "I'm not leaving home for next week after we get out of this damn forest."
+
+        b "Same here mate."
+
+        hide robert normal with dissolve
+
+    if tyrone_alive == True:
+        "Tyrone does not wait any longer and just rushes through the bridge."
+
+        "When he makes it to the other side starts breathing heavily."
+
+        show tyrone normal at right2
+        with dissolve
+
+        t "Im done with this shit B."
+
+        b "Well I can see that."
+
+        hide tyrone normal with dissolve
+
+        if robert_alive == True:
+            "He stands next to Robert."
+
+        else:
+            "He watches others pass."
+
+        "Bradley makes it through with little to no problem."
+
+        show bradley normal at right2
+        with dissolve
+
+        by "Watch out Helen. It feels like it's about to snap."
+
+        "Helen, pale as a ghost, starts making her way through bridge."
+
+        "She stops in a middle and starts shaking. Then she gets on all fours."
+
+        hide bianca normal with dissolve
+        hide bradley normal with dissolve
+
+        "You stand on the other side of the bridge."
+
+        show helen normal at center1
+        with dissolve
+
+        h "Shit... I can't. It'll break."
+
+        b "Shut up and come here Helen. Don't you dare to panic."
+
+        "You see cracks in planks."
+
+        define bridge_diff = 4
+
+        menu:
+            h "Bianca... I can't."
+
+            "<CHARM> Come on Helen. You are almost here... Be brave.":
+                call helen_charm_check
+                menu:
+                    "..."
+
+                    "<TRICKERY> <LIE> The bridge wont break":
+                        call helen_trickery_check
+
+                        menu:
+                            "..."
+
+                            "Just come to me.":
+                                call come_to_me
+
+
+                    "Just come to me.":
+                        call come_to_me
+
+
+            "<TRICKERY> <LIE> The bridge wont break":
+                call helen_trickery_check
+
+                menu:
+                    "..."
+
+                    "<CHARM> Come on Helen. You are almost here... Be brave.":
+                        call helen_charm_check
+                        menu:
+                            "..."
+
+                            "Just come to me.":
+                                call come_to_me
+                    
+
+                    "Just come to me.":
+                        call come_to_me
+
+
+
+            "Just come to me.":
+                call come_to_me
+
+
+    if helen_alive == True:
+        "Both of you are lying on a ground breathing heavily."
+
+        h "That was close."
+
+        b "Lets get out of here."
+
+        b "Yeah"
+
+        "Bradley helps you get up and together you continue looking for a way out."
+
+    else:
+
+        b "No... Helen!"
+
+        "You feel Bradley's hand on your shoulder."
+
+        by "You can't help her now. Let's go."
+
+        "Still in shock you stand up and continue looking for a way out."
+
+    
+    call calculate_ending
+
+
     return
+
+
+label helen_charm_check:
+    b "Come on Helen. You are almost here... Be brave."
+    "You reach your hand to her."
+
+    if stats.stats["charm"] >= 3:
+        $ bridge_diff -= 1
+        "<SUCCESS> Helen seems to be calming down."
+    else:
+        "<FAILURE> Helen is still panicking."
+    
+    return
+
+label helen_trickery_check:
+    b "Helen, It just look like it's about to break."
+    b "You will be fine. Trust me."
+
+    if stats.stats["trickery"] >= 4:
+        $ bridge_diff -= 1
+        "<SUCCESS> Helen seems to be calming down."
+    else:
+        h "<FAILURE> STOP LYING!"
+        $ bridge_diff += 1
+        "Helen seems to panicing more."
+    
+    return
+
+label come_to_me:
+    b "Just come to me..."
+    b "On three"
+    b "One"
+    b "Two"
+    b "THREE!"
+
+    hide helen normal with dissolve
+
+    menu:
+        "Helen jumps to you in a second that bridge snaps under her."
+
+        "<FITNESS> CATCH HER":
+            if stats.stats["fitness"] >= bridge_diff:
+                "<SUCCESS> You grab her hand and pull her on your side of riverbank."
+            else:
+                "<FAILURE> You miss her hand by couple centimeters."
+                h "Fu...."
+                "You see her falling into dark water."
+                b "HELEN!"
+                b "HELEN!"
+                "No response."
+                $ helen_alive = False
+    return
+
+
+
+
