@@ -21,7 +21,7 @@ image bg parking = "images/backgrounds/bg_parking.png"
 image bg outside = "images/backgrounds/bg_outside.png"
 image bg park = "images/backgrounds/bg_park.png"
 image bg forest = "images/backgrounds/bg_las_01.png"
-image bg deepforest = "images/backgrounds/bg_forest_02.png"
+image bg deepforest = "images/backgrounds/bg_las_02.png"
 
 # The game starts here.
 
@@ -32,7 +32,7 @@ label start:
 
     #call opening_scene from _call_opening_scene
 
-    call effigy_spook
+    call trap_field
     #call park_sounds
     #call forest_screams
     return

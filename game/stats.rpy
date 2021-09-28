@@ -14,7 +14,7 @@ init python:
 
 
 label initialize:
-    define stats = Statistics(2,2,2,2,2)
+    define stats = Statistics(3,3,3,3,3)
     return
 
 

@@ -478,5 +478,93 @@ label effigy_spook:
 
 
 label getting_lost:
-    "boo"
+    scene bg deepforest with dissolve
+    "After a couple minutes of walking there is no end to the forest."
+
+    show tyrone normal at left3 with dissolve
+
+    t "Are you guys sure we are on a right track?"
+
+    show helen normal at right3 with dissolve
+
+    h "Yeah..."
+
+    h "But let me check map really quick."
+
+    "She pulls up her phone."
+
+    h "Really? Now?"
+
+    show robert normal at center3 with dissolve
+
+    r "What's wrong?"
+
+    h "My battery has run out."
+
+    r "Great. I forgot my phone."
+
+    t "Let me check mine."
+
+    "Tyrone pulls up his phone"
+
+    t "What the hell..."
+
+    h "What's wrong?"
+
+    t "No service. No GPS... what the hell is going on..."
+
+    hide robert normal with dissolve
+
+    show bianca normal at center3 with dissolve
+
+    h "How is your phone Bianca?"
+
+    "You check up your phone..."
+
+    "...It has no service, nor GPS signal."
+
+    b "Same as Tyrone's"
+
+    "You look at Bradley. He check his phone."
+
+    by "Same here."
+
+    b "Great. Are we really lost?"
+
+    h "Oh don't worry. This forest is not that big."
+
+    h "At some point we will get out."
+
+    b "That's not something I was hoping for."
+
+    b "My parents will be so pissed off."
+
+    t "No need to panic. People know we are coming to the party. If we don't show up they will probably start looking for us."
+
+    "He looks at Robert."
+
+    t "At least they will look for some of us."
+
+    hide helen normal with dissolve
+    show bradley normal at right3 with dissolve
+
+    by "Im gonna agree with the big guy here. There is no reason to panic. Just continue walking."
+
+    hide bradley normal with dissolve
+
+    "Bradley starts walking down the path."
+
+    t "I guess there is no point not to."
+
+    hide tyrone normal with dissolve
+
+    "Tyrone goes after Bradley. The rest follows them."
+
+    b "I guess that's the best shot."
+    
+    hide bianca normal with dissolve
+
+    call trap_field
+
+
     return
