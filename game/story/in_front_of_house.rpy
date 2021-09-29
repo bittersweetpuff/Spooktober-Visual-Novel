@@ -16,7 +16,7 @@ label meeting_bradley:
 
     b "I was worried about you. Really. You are like... the last person on earth to miss school."
 
-    by "I was feeling really sick. But not Im okay."
+    by "I was feeling really sick. But now Im okay."
 
     b "Well that's a relief."
 
@@ -34,27 +34,27 @@ label meeting_bradley:
         "Astrophysics":
             b "Astrophisics major would be neat."
             by "Nice"
-            call increase_smarts
+            call increase_smarts from _call_increase_smarts_1
 
         "Cyber security":
             b "Cyber security would be neat. I could use some of my XSS skills."
             by "Nice"
-            call increase_trickery
+            call increase_trickery from _call_increase_trickery_1
 
         "Drama":
             b "Drama major would be a dream come true."
             by "Nice"
-            call increase_charm
+            call increase_charm from _call_increase_charm_1
 
         "Diplomacy":
             b "Diplomacy major would be neat."
             by "Nice"
-            call increase_empathy
+            call increase_empathy from _call_increase_empathy_1
 
         "Just getting sports scholarship would be nice":
             b "Too be honest... Just getting sports scholarship would be nice."
             by "That would be cool."
-            call increase_fitness
+            call increase_fitness from _call_increase_fitness_1
 
     b "But really. I thought I've already told you that."
 
@@ -108,32 +108,32 @@ label meeting_bradley:
             else:
                 by "That was a long time ago. Don't worry about it."
             b "Yeah, but I still have a lot of training ahead of me."
-            call decrease_fitness
+            call decrease_fitness from _call_decrease_fitness_1
 
         "Calling Maggie a toad.":
             b "Calling Maggie a toad in like... third grade"
             by "Oh, that was a messy one."
-            b "Yeah. That was meant. Didn't knew she had this weird skin disease."
+            b "Yeah. That was mean. Didn't knew she had this weird skin disease."
             b "Gosh... sometimes Im so mean."
-            call decrease_empathy
+            call decrease_empathy from _call_decrease_empathy_1
 
         "Destroying our school project.":
             b "Destroying our school project last year."
             by "How could I forget that."
             b "Hell, I wish I had a firmer grip."
-            call decrease_trickery
+            call decrease_trickery from _call_decrease_trickery_1
 
         "Losing in knowledge quiz.":
             b "Losing in knowlege quiz"
             by "But that was a long time ago, right?"
             b "Yeah but still. Should've studied more."
-            call decrease_smarts
+            call decrease_smarts from _call_decrease_smarts_1
 
         "Crying after I didn't get what i wanted for birthday.":
             b "Crying after I didn't get what i wanted for birthday."
             by "Oh come on."
             b "No... that was my sixth birthday and people still think Im spoiled child who can't behave herself."
-            call decrease_charm
+            call decrease_charm from _call_decrease_charm_1
     
     by "Girl, if that is your most embarrassing secret you are a lucky one."
 
@@ -145,7 +145,7 @@ label meeting_bradley:
     hide bradley normal
     with dissolve
 
-    call cat_sighted
+    call cat_sighted from _call_cat_sighted
         
 
     return
@@ -188,15 +188,23 @@ label cat_sighted:
             with dissolve
 
             "You countinue walking."
-            call meeting_helen
+            call meeting_helen from _call_meeting_helen
         
         "Let's take a closer look.":
-            call cat_encountered
+            call cat_encountered from _call_cat_encountered
     return
 
 label cat_encountered:
 
     $ spooks_encountered = spooks_encountered + 1
+
+    hide bradley normal
+    with dissolve
+
+    hide bianca normal
+    with dissolve
+
+    scene bg cat with dissolve
 
     "You get closer to the cat. From there you can see its red eyes staring at you."
 
@@ -221,8 +229,7 @@ label cat_encountered:
             "The cat hisses at him and starts running away."
     by "Hey come back here."
 
-    hide bradley normal
-    with dissolve
+    
 
     "Bradley starts chasing a cat."
 
@@ -230,8 +237,6 @@ label cat_encountered:
         by "Come on Bianca, it's going to escape."
 
         "<FITNESS> Try to catch it.":
-            hide bianca normal
-            with dissolve
             if stats.stats['fitness'] >= 4:
                 "<SUCCESS> You dash after the running cat and close distance in a couple of seconds. You catch it with swift movement."
                 "It starts hissing and scratches you so you let it go."
@@ -247,17 +252,11 @@ label cat_encountered:
             "You start cheering for Bradley"
             b "Go get him hunter!"
             "Bradley sadly can't keep up with a cat who disappears in a night."
-            show bradley normal at left2
-            with dissolve
             by "Stupid cat."
             b "Don't blame it. It just got scared."
             by "Maybe... Nevermind, lets go."
-            hide bianca normal
-            with dissolve
-            hide bradley normal
-            with dissolve
 
-    call meeting_helen
+    call meeting_helen from _call_meeting_helen_1
 
 return
 

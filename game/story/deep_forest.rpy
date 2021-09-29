@@ -38,9 +38,13 @@ label trap_field:
     hide bianca normal with dissolve
     hide bradley normal with dissolve
 
+    scene bg traps with dissolve
+
     "As you continue to walking you come across an old sign."
 
     "\"Warning! Bear traps!\""
+
+    scene bg deepforest with dissolve
 
     show helen normal at right3
     with dissolve
@@ -103,7 +107,7 @@ label trap_field:
 
     b "WATCH OUT!"
 
-    "You point at rest of traps lying around and slowly make your way to robert."
+    "You point at rest of traps lying around and slowly make your way to Robert."
     
     show robert normal at center1
     with dissolve
@@ -249,12 +253,14 @@ label trap_field:
 
     "Worried and stressed you continue walking deeper and deeper into the unknown."
     
-    call barbwire
+    call barbwire from _call_barbwire
 
     return
 
 
 label barbwire:
+
+    scene bg wire with dissolve
 
     "Few minutes after leaving a trap field you encounter another obstacle."
 
@@ -413,12 +419,16 @@ label barbwire:
 
         "You and the rest continue walking with a swift pace."
 
-    call bridge
+        hide tyrone normal with dissolve
+
+    call bridge from _call_bridge
 
     return
 
 
 label bridge:
+
+    scene bg river with dissolve
 
     "Not a long time after making it through a barbed wire fence you hear the sound of running water."
 
@@ -524,46 +534,46 @@ label bridge:
         h "Bianca... I can't."
 
         "<CHARM> Come on Helen. You are almost here... Be brave.":
-            call helen_charm_check
+            call helen_charm_check from _call_helen_charm_check
             menu:
                 "..."
 
                 "<TRICKERY> <LIE> The bridge wont break":
-                    call helen_trickery_check
+                    call helen_trickery_check from _call_helen_trickery_check
 
                     menu:
                         "..."
 
                         "Just come to me.":
-                            call come_to_me
+                            call come_to_me from _call_come_to_me
 
 
                 "Just come to me.":
-                    call come_to_me
+                    call come_to_me from _call_come_to_me_1
 
 
         "<TRICKERY> <LIE> The bridge wont break":
-            call helen_trickery_check
+            call helen_trickery_check from _call_helen_trickery_check_1
 
             menu:
                 "..."
 
                 "<CHARM> Come on Helen. You are almost here... Be brave.":
-                    call helen_charm_check
+                    call helen_charm_check from _call_helen_charm_check_1
                     menu:
                         "..."
 
                         "Just come to me.":
-                            call come_to_me
+                            call come_to_me from _call_come_to_me_2
                     
 
                 "Just come to me.":
-                    call come_to_me
+                    call come_to_me from _call_come_to_me_3
 
 
 
         "Just come to me.":
-            call come_to_me
+            call come_to_me from _call_come_to_me_4
 
 
     if helen_alive == True:
@@ -588,7 +598,7 @@ label bridge:
         "Still in shock you stand up and continue looking for a way out."
 
     
-    call calculate_ending
+    call calculate_ending from _call_calculate_ending
 
 
     return

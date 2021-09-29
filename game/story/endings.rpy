@@ -1,12 +1,13 @@
 label calculate_ending:
+    scene bg deepforest with dissolve
 
     if helen_alive and robert_alive and tyrone_alive:
-        call good_ending
+        call good_ending from _call_good_ending
     else:
         if helen_alive or robert_alive or tyrone_alive:
-            call bad_ending
+            call bad_ending from _call_bad_ending
         else:
-            call worst_ending
+            call worst_ending from _call_worst_ending
     return
 
 
@@ -55,6 +56,8 @@ label calculate_ending:
         "There is no answer but you're knocking pushes door open."
 
         "You enter weird house."
+
+        scene bg yaga with dissolve
 
         "Walls are covered in strange symbols and floor is full of coal."
 
@@ -147,6 +150,8 @@ label calculate_ending:
         "There is no answer but you're knocking pushes door open."
 
         "You enter weird house."
+
+        scene bg yaga with dissolve
 
         "Walls are covered in strange symbols and floor is full of coal."
 
@@ -257,6 +262,8 @@ label calculate_ending:
         "There is no answer but you're knocking pushes door open."
 
         "You enter weird house."
+
+        scene bg yaga with dissolve
 
         "Walls are covered in strange symbols and floor is full of coal."
 

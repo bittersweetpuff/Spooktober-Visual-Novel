@@ -73,7 +73,7 @@ label forest_screams:
             hide bradley normal
             with dissolve
 
-            call meeting_tyrone
+            call meeting_tyrone from _call_meeting_tyrone
 
         "Let's check it out!":
             b "Yeah, that was weird. Let's chceck it out."
@@ -85,7 +85,7 @@ label forest_screams:
             hide bradley normal
             with dissolve
 
-            call tracks_spook
+            call tracks_spook from _call_tracks_spook
 
 
     return
@@ -143,7 +143,7 @@ label tracks_spook:
     with dissolve
     hide bradley normal
     with dissolve
-    call meeting_tyrone
+    call meeting_tyrone from _call_meeting_tyrone_1
     return
 
 label meeting_tyrone:
@@ -287,7 +287,7 @@ label meeting_tyrone:
 
     hide robert normal with dissolve
 
-    call forest_silhouette
+    call forest_silhouette from _call_forest_silhouette
 
     return
 
@@ -331,7 +331,7 @@ label forest_silhouette:
 
         "Just ignore it":
             b "Maybe, but we are almost there. Lets ignore it and just go to this party."
-            b "Im tierd."
+            b "Im tired."
 
             hide bianca normal with dissolve
             hide helen normal with dissolve
@@ -341,7 +341,7 @@ label forest_silhouette:
 
             hide tyrone normal with dissolve
 
-            call calculate_early_ending
+            call calculate_early_ending from _call_calculate_early_ending
 
         "Lets check it out.":
             b "Well, if you say so... lets check it. Out."
@@ -353,7 +353,7 @@ label forest_silhouette:
 
             hide helen normal with dissolve
 
-            call effigy_spook
+            call effigy_spook from _call_effigy_spook
 
     return
 
@@ -381,6 +381,8 @@ label effigy_spook:
     hide bianca normal with dissolve
 
     "You look around with no result."
+
+    scene bg scarecrow with dissolve
 
     "Finally you find something that may have looked like a human silhouette."
 
@@ -424,6 +426,8 @@ label effigy_spook:
 
     hide tyrone normal with dissolve
     hide bianca normal with dissolve
+
+    scene bg forest with dissolve
 
     "You return to Helen and the rest."
 
@@ -472,7 +476,7 @@ label effigy_spook:
     hide bradley normal with dissolve
     hide bianca normal with dissolve
 
-    call getting_lost
+    call getting_lost from _call_getting_lost
 
     return
 
@@ -564,7 +568,7 @@ label getting_lost:
     
     hide bianca normal with dissolve
 
-    call trap_field
+    call trap_field from _call_trap_field
 
 
     return

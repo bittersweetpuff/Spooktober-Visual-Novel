@@ -174,7 +174,7 @@ label meeting_helen:
 
     "You continue walking in silence as you enter park."
 
-    call park_sounds
+    call park_sounds from _call_park_sounds
 
     return
 

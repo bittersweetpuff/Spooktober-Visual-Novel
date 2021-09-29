@@ -1,10 +1,10 @@
 label calculate_early_ending:
 
     if spooks_encountered == 0:
-        call party_ending
+        call party_ending from _call_party_ending
 
     else:
-        call getting_lost
+        call getting_lost from _call_getting_lost_1
 
     return
 

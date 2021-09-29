@@ -40,13 +40,13 @@ label park_sounds:
             with dissolve
             hide bianca normal
             with dissolve
-            call meeting_robert
+            call meeting_robert from _call_meeting_robert
         
         "That's weird. Let's check it out.":
             b "Yeah. That seems weird."
             "You head towards the source of the sound."
 
-            call park_spook
+            call park_spook from _call_park_spook
     return
 
 
@@ -71,6 +71,8 @@ label park_spook:
     with dissolve
 
     "You also start looking around but nothing catches your attention."
+
+    scene bg cloth with dissolve
 
     "Then you see a piece of dark clothing laying in one of the bushes."
 
@@ -130,7 +132,9 @@ label park_spook:
     with dissolve
     hide bianca normal
     with dissolve
-    call meeting_robert
+
+    scene bg park with dissolve
+    call meeting_robert from _call_meeting_robert_1
     return
 
 label meeting_robert:
@@ -181,7 +185,7 @@ label meeting_robert:
 
     h "Oh come on. Aren't you too \"cool\" and \"independent\" to go on halloween parties?"
 
-    r "And who said Tm going to the party, huh?"
+    r "And who said Im going to the party, huh?"
 
     h "And what else would you be doing here?"
 
@@ -264,7 +268,7 @@ label meeting_robert:
 
     "You leave a park and take shortcut through the forest."
 
-    call forest_screams
+    call forest_screams from _call_forest_screams
 
     return
         

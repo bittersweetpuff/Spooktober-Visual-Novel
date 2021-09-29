@@ -26,6 +26,13 @@ image bg forest = "images/backgrounds/bg_las_01.png"
 image bg deepforest = "images/backgrounds/bg_las_02.png"
 image bg witchhosue = "images/backgrounds/bg_chata.png"
 image bg stacy = "images/backgrounds/bg_end_01.png"
+image bg wire = "images/backgrounds/bg_druty.png"
+image bg cat = "images/backgrounds/bg_kot.png"
+image bg traps = "images/backgrounds/bg_pulapka.png"
+image bg river = "images/backgrounds/bg_rzeka.png"
+image bg scarecrow = "images/backgrounds/bg_strach.png"
+image bg cloth = "images/backgrounds/bg_ubranie.png"
+image bg yaga = "images/backgrounds/baba_jaga_inside.png"
 
 # The game starts here.
 
@@ -34,9 +41,9 @@ label start:
 
     #call demo
 
-    call opening_scene from _call_opening_scene
+    #call opening_scene from _call_opening_scene
 
-    #call bridge
+    call cat_sighted
     #call park_sounds
     #call forest_screams
     return

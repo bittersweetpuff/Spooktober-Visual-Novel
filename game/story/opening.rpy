@@ -119,7 +119,7 @@ label opening_scene:
 
     "After your parents leave you head to the kitchen, finish grandma's pumpkin pie and go upstairs to your room."
 
-    call room_scene
+    call room_scene from _call_room_scene
 
     return
 
@@ -148,7 +148,7 @@ label room_scene:
 
     "\"Anyway, you heard about party at Stacy Glow's place? Her parents are out for a weekend so she is throwing a halloween party. Wonna come?\""
 
-    "You answer: \"I'd love too but my parents kinda dont want me to go for the parties after the last time.\""
+    "You answer: \"I'd love too but my parents kinda don't want me to go to parties after the last time.\""
 
     "You got a response almost instantly."
 
@@ -158,20 +158,20 @@ label room_scene:
         "\"I took some bad internet advice on not getting drunk\"":
             "\"I took some bad internet advice on not getting drunk and it... well didn't work as intended. I should've known better. So yeah. Im kinda dumb.\" - you reply"
             "Bradley anwserws: \"Well yeah, that sucks\""
-            call decrease_smarts
+            call decrease_smarts from _call_decrease_smarts
 
         "\"Shouldn't have been hitting on others when drunk.\"":
-            "\"Shouldn't have been hitting on others when drunk. That was so cringe. I dont really want to embarrass myself again\" - you reply"
+            "\"Shouldn't have been hitting on others when drunk. That was so cringe. I don't really want to embarrass myself again\" - you reply"
             "Bradley anwserws: \"Oh... nothing's worse than booze endorsed heartbreak\""
             "\"More like booze endorsed meltdown.\""
-            call decrease_charm
+            call decrease_charm from _call_decrease_charm
 
         "\"I got really mean while drunk.\"":
             "\"I got really mean while drunk and I don't want to ruin any more friendships because of that.\" - you reply"
             "Bradley anwserws: \"That's the tough one to handle.\""
-            call decrease_empathy
+            call decrease_empathy from _call_decrease_empathy
 
-    "But to be honest, you feel like going on a party is a good idea. At least it is some way to stress out after this whole week."
+    "But to be honest, you feel like going to a party is a good idea. At least it is some way to unwind after this whole week."
 
     "You quickly text Bradley: \"Okay... I guess a little party never killed nobody. I'll get ready in like... 10 minutes.\""
 
@@ -188,7 +188,7 @@ label room_scene:
 
     "You hear a doorbell ringing. It must be Bradley. You grab your bag and leave your house."
 
-    call meeting_bradley
+    call meeting_bradley from _call_meeting_bradley
 
     return
 
