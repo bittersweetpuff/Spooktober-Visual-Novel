@@ -33,7 +33,11 @@ image bg river = "images/backgrounds/bg_rzeka.png"
 image bg scarecrow = "images/backgrounds/bg_strach.png"
 image bg cloth = "images/backgrounds/bg_ubranie.png"
 image bg yaga = "images/backgrounds/baba_jaga_inside.png"
-
+image bg grave = "images/backgrounds/bg_grob.png"
+image bg phone = "images/backgrounds/bg_phone.png"
+image bg end1 = "images/backgrounds/ending_01.png"
+image bg end2 = "images/backgrounds/ending_02.png"
+image bg end3 = "images/backgrounds/ending_03.png"
 # The game starts here.
 
 label start:
@@ -43,7 +47,7 @@ label start:
 
     #call opening_scene from _call_opening_scene
 
-    call cat_sighted
+    call worst_ending
     #call park_sounds
     #call forest_screams
     return

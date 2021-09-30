@@ -132,6 +132,8 @@ label room_scene:
 
     b "Damn, that was a long week."
 
+    scene bg phone with dissolve
+
     "You hear your phone buzzing. You quickly check it out just to see a text from Bradley"
 
     "\"Sup' Bianca. You home?\""
@@ -178,6 +180,8 @@ label room_scene:
     "\"Ok, I'll be waiting in front of your house\" - you get as reply."
 
     "\"Great. See you there\" - you type back and throw your phone into your bag. You change your clothes and do your best to fix your hair."
+
+    scene bg room with dissolve
 
     "After a chaotic 20 minutes you look in a mirror."
 

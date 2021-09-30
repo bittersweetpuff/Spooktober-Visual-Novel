@@ -67,6 +67,8 @@ label calculate_ending:
 
         "You don't see any sign of life here but find door to the backyard."
 
+        scene bg grave with dissolve
+
         "You leave house and then you see it..."
 
         "... freshly dug grave."
@@ -110,7 +112,10 @@ label calculate_ending:
 
         "Your phone service is back and now when you look around, you see familiar path."
 
-        "The only thing not usual are Bradle's corpse."
+        "The only thing not usual is Bradley's dead body."
+        
+        
+        scene bg end1 with dissolve
 
         "You are shocked."
 
@@ -158,6 +163,8 @@ label calculate_ending:
         b "Okay this place is messed up."
 
         "You don't see any sign of life here but find door to the backyard."
+
+        scene bg grave with dissolve
 
         "You leave house and then you see it..."
 
@@ -212,11 +219,18 @@ label calculate_ending:
 
         w "Call me what you want sweetheart. Now it's your turn."
 
+        hide bradley curse with dissolve
+
+        scene bg end3 with dissolve
+
         "He smiles as he gets closer"
+
+
+        "You start running away."
 
         "Then, your scream tears down a silence of the night."
 
-        hide bradley curse with dissolve
+        
 
         "The End."
 
@@ -271,6 +285,8 @@ label calculate_ending:
 
         "You don't see any sign of life here but find door to the backyard."
 
+        scene bg grave with dissolve
+
         "You leave house and then you see it..."
 
         "... freshly dug grave."
@@ -310,11 +326,17 @@ label calculate_ending:
 
         w "One you may never live long enought to withness the end of."
 
+        hide bradley curse with dissolve
+
+        scene bg end2 with dissolve
+
         "He smiles as he gets closer"
+
+        
 
         "Then, your scream tears down a silence of the night."
 
-        hide bradley curse with dissolve
+        
 
         "The End."
 
