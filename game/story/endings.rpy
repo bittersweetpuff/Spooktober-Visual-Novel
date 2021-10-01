@@ -112,7 +112,9 @@ label calculate_ending:
 
         "Your phone service is back and now when you look around, you see familiar path."
 
-        "The only thing not usual is Bradley's dead body."
+        "It feels like all that has happened was just some kind of bad dream."
+
+        "The only thing making all those memories real is Bradley's body in a grave."
         
         
         scene bg end1 with dissolve
@@ -127,7 +129,9 @@ label calculate_ending:
 
         b "I hope now... at least you will rest in peace."
 
-        "The End"
+        scene black with dissolve
+
+        centered "{size=+30}{font=Gothic_Birthday_Cake.ttf}The End{/font}{/size}"
 
         return
 
@@ -232,9 +236,11 @@ label calculate_ending:
 
         
 
-        "The End."
+        scene black with dissolve
 
-    return
+        centered "{size=+30}{font=Gothic_Birthday_Cake.ttf}The End{/font}{/size}"
+
+        return
 
 
 
@@ -338,5 +344,9 @@ label calculate_ending:
 
         
 
-        "The End."
+        scene black with dissolve
+
+        centered "{size=+30}{font=Gothic_Birthday_Cake.ttf}The End{/font}{/size}"
+
+        return
 

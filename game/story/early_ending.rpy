@@ -76,7 +76,9 @@ label party_ending:
 
     "But that's something future Bianca should worry about."
 
-    "The End."
+    scene black with dissolve
+
+    centered "{size=+30}{font=Gothic_Birthday_Cake.ttf}The End{/font}{/size}"
 
 
     return

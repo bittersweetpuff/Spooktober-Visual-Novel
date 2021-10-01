@@ -1,5 +1,14 @@
+screen hello_world():
+        text "Hello, World." size 40
 label demo:
+
+
     "Ok so this is a test"
+
+
+    centered "{size=+20}{font=Gothic_Birthday_Cake.ttf}The End{/font}{/size}"
+
+    
 
     "You see Bradley in front of you"
 

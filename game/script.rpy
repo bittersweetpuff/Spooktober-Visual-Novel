@@ -43,11 +43,10 @@ image bg end3 = "images/backgrounds/ending_03.png"
 label start:
     call inintialize_variables from _call_inintialize_variables
 
-    #call demo
+
+    call opening_scene from _call_opening_scene
 
     #call opening_scene from _call_opening_scene
-
-    call worst_ending
     #call park_sounds
     #call forest_screams
     return
