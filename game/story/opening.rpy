@@ -19,10 +19,10 @@ label opening_scene:
             call increase_trickery from _call_increase_trickery
 
         "Make-up kit.":
-            "Your make-up kit you always try to keep close in case of emergency, but sadly you can't open door with it"
+            "Your make-up kit you always try to keep close in case of emergency, but sadly you can't open the door with it"
             call increase_charm from _call_increase_charm
 
-    "Suddenly, door open and you see your father, dressed in rather formal attire. He looks at you worried."
+    "Suddenly, the door open and you see your father, dressed in rather formal attire. He looks at you worried."
 
     dad "You're late Bianca. I was afraid something may have happened to you."
 
@@ -57,7 +57,7 @@ label opening_scene:
             b "I hope so."
             call increase_smarts from _call_increase_smarts
 
-    dad "Anyway. There is a pumpkin pie from your grandma in a fridge in case you get hungry"
+    dad "Anyway. There is a pumpkin pie from your grandma in the fridge in case you get hungry"
 
     b "Are you going somewhere?"
     
@@ -75,7 +75,7 @@ label opening_scene:
 
     dad "If you say so."
 
-    mom "Im glad you're back Bianca. We realized that you've forgotten the key so we couldn't leave without you coming back."
+    mom "I'm glad you're back Bianca. We realized that you've forgotten the key so we couldn't leave without you coming back."
 
     b "Thanks mom."
 
@@ -97,7 +97,7 @@ label opening_scene:
             b "..kinda."
             call decrease_trickery from _call_decrease_trickery
 
-        "Im not that fast":
+        "I'm not that fast":
             b "Okay mom. I've told you so many times. I have many talents, sadly speed is not one of them."
             mom "Well I can see that honey"
             b "..."
@@ -111,9 +111,9 @@ label opening_scene:
 
     mom  "Bianca... please..."
 
-    b "Im not joking mom. My self esteem is as dead as it gets."
+    b "I'm not joking mom. My self esteem is as dead as it gets."
 
-    dad "Honey, we'll be late. Let's go. Im sure Bianca also could use some rest."
+    dad "Honey, we'll be late. Let's go. I'm sure Bianca also could use some rest."
 
     b "Have fun guys!"
 
@@ -150,7 +150,7 @@ label room_scene:
 
     "\"Anyway, you heard about party at Stacy Glow's place? Her parents are out for a weekend so she is throwing a halloween party. Wonna come?\""
 
-    "You answer: \"I'd love too but my parents kinda don't want me to go to parties after the last time.\""
+    "You answer: \"I'd love too but my parents don't want me to go to parties after the last time.\""
 
     "You got a response almost instantly."
 
@@ -175,7 +175,7 @@ label room_scene:
 
     "But to be honest, you feel like going to a party is a good idea. At least it is some way to unwind after this whole week."
 
-    "You quickly text Bradley: \"Okay... I guess a little party never killed nobody. I'll get ready in like... 10 minutes.\""
+    "You quickly text Bradley: \"Okay... I guess a little party never killed anybody. I'll get ready in like... 10 minutes.\""
 
     "\"Ok, I'll be waiting in front of your house\" - you get as reply."
 

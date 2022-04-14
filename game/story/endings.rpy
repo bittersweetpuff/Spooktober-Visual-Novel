@@ -53,9 +53,9 @@ label calculate_ending:
 
         b "Anybody there? We need help!"
 
-        "There is no answer but you're knocking pushes door open."
+        "There is no answer but your knocking pushes door open."
 
-        "You enter weird house."
+        "You enter the weird house."
 
         scene bg yaga with dissolve
 
@@ -65,17 +65,17 @@ label calculate_ending:
 
         h "Yeah."
 
-        "You don't see any sign of life here but find door to the backyard."
+        "You don't see any sign of life here but find a door to the backyard."
 
         scene bg grave with dissolve
 
-        "You leave house and then you see it..."
+        "You leave the house and then you see it..."
 
-        "... freshly dug grave."
+        "... a freshly dug grave."
 
         "You start feeling really weird, but instead of running away you take a look inside."
 
-        "And than you see Bradley's body."
+        "and then you see Bradley's body."
 
         "You manage to silence your scream."
 
@@ -92,17 +92,17 @@ label calculate_ending:
 
         hide witch normal with dissolve
 
-        "He does not finish as Helen kick him in his calf hitting him off balance."
+        "He does not finish as Helen kicks him in his calf throwing him off balance."
 
         h "Take this you demon bitch!"
 
         w "Wai..."
 
-        "Tyrone does not wait as he tackles demon to the ground and start hitting him with his fist."
+        "Tyrone does not wait as he tackles the demon to the ground and starts hitting him with his fist."
 
         t "YOU. GOD. DAMN. SON. OF. THE. BITCH. I. WILL. KILL. YOU!"
 
-        "Robert slowly grabs beer keg he has been carrying all the time and lift it above supposed Bradleys head."
+        "Robert slowly grabs the beer keg he has been carrying all the time and lifts it above supposed Bradleys head."
 
         r "Heads up, bitch!"
 
@@ -121,11 +121,11 @@ label calculate_ending:
 
         "You are shocked."
 
-        "You hear Tyrone calling police but you dont care."
+        "You hear Tyrone calling police but you don't care."
 
-        "You stand over your best friend grave and start crying."
+        "You stand over your best friend's grave and start crying."
 
-        b "Im sorry."
+        b "I'm sorry."
 
         b "I hope now... at least you will rest in peace."
 
@@ -156,9 +156,9 @@ label calculate_ending:
 
         b "Anybody there? We need help!"
 
-        "There is no answer but you're knocking pushes door open."
+        "There is no answer but your knocking pushes door open."
 
-        "You enter weird house."
+        "You enter the weird house."
 
         scene bg yaga with dissolve
 
@@ -166,17 +166,17 @@ label calculate_ending:
 
         b "Okay this place is messed up."
 
-        "You don't see any sign of life here but find door to the backyard."
+        "You don't see any sign of life here but find a door to the backyard."
 
         scene bg grave with dissolve
 
-        "You leave house and then you see it..."
+        "You leave the house and then you see it..."
 
-        "... freshly dug grave."
+        "... a freshly dug grave."
 
         "You start feeling really weird, but instead of running away you take a look inside."
 
-        "And than you see Bradley's body."
+        "and then you see Bradley's body."
 
         "You manage to silence your scream as you hear someone standing behind you."
 
@@ -189,7 +189,7 @@ label calculate_ending:
 
         b "Who... what are you?"
 
-        w "Oh Bianca. Im your dear friend. Don't you see?"
+        w "Oh Bianca. I'm your dear friend. Don't you see?"
 
         "You look around"
 
@@ -279,9 +279,9 @@ label calculate_ending:
         
         b "Anybody there? We need help!"
 
-        "There is no answer but you're knocking pushes door open."
+        "There is no answer but your knocking pushes door open."
 
-        "You enter weird house."
+        "You enter the weird house."
 
         scene bg yaga with dissolve
 
@@ -289,17 +289,17 @@ label calculate_ending:
 
         b "Okay this place is messed up."
 
-        "You don't see any sign of life here but find door to the backyard."
+        "You don't see any sign of life here but find a door to the backyard."
 
         scene bg grave with dissolve
 
-        "You leave house and then you see it..."
+        "You leave the house and then you see it..."
 
-        "... freshly dug grave."
+        "... a freshly dug grave."
 
         "You start feeling really weird, but instead of running away you take a look inside."
 
-        "And than you see Bradley's body."
+        "and then you see Bradley's body."
 
         "You manage to silence your scream as you hear someone standing behind you."
 
@@ -312,7 +312,7 @@ label calculate_ending:
 
         b "Who... what are you?"
 
-        w "Oh Bianca. Im your dear friend. Don't you see?"
+        w "Oh Bianca. I'm your dear friend. Don't you see?"
 
         b "Sh.. shut up! He's dead! You KILLED HIM!"
 

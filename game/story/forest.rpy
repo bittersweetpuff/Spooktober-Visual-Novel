@@ -132,7 +132,7 @@ label tracks_spook:
                     
 
 
-    b "You know what guys? The better we reach Stacy's house the better."
+    b "You know what guys? The faster we reach Stacy's house the better."
     r "Yeah."
     by "You're right"
     h "It's not far from here."
@@ -174,7 +174,7 @@ label meeting_tyrone:
     "Bradley's mood seems to getting better and better every second."
 
     h "HEY BIANCA. COME HERE."
-    "Helen Is waving at you, showing you to come to her."
+    "Helen is waving at you, showing you to come to her."
     hide bradley normal
     with dissolve
     hide bianca normal
@@ -188,7 +188,7 @@ label meeting_tyrone:
 
     r "Come on. How many people am I gonna encounter tonight?"
     h "Stop whining."
-    r "And out of all people it have to be this dickhead?"
+    r "And out of all people it has to be this dickhead?"
     h "Shut up, Robert."
     show bianca normal at center3
     with dissolve
@@ -196,13 +196,13 @@ label meeting_tyrone:
     "Helen points her finger at a silhouette sitting next to one of the threes."
     "You see a tall guy sitting next to the beer keg and drinking from a can of light beer."
     b "Is that..."
-    r "...Tyrone McNamara. Yeah. Biggest damn idiot in the whole school. Probably becouse of brain damage he suffered while playing football or something."
+    r "...Tyrone McNamara. Yeah. The biggest damn idiot in the whole school. Probably becouse of brain damage he suffered while playing football or something."
     h "Is there someone you don't hate?"
     r "Shut up."
     "Helen rolls her eyes."
     b "Oh come on Robbie. I know him. He's not that bad."
     hide bianca normal with dissolve
-    r "Don't tell me she'll invite him to join as well."
+    r "Don't tell me she'll invite him to join us."
     h "Well, she is a social butterfly afterall."
 
     hide robert normal with dissolve
@@ -224,11 +224,11 @@ label meeting_tyrone:
 
     b "Tell me big guy. Does your coach know you drink this stuff?"
 
-    "You point at bushes."
+    "You point at the bushes."
 
     t "Oh come on girl. That's just a beer. Everybody is drinking that."
 
-    b "You got point, but not everybody is Cloudvale High Butchers running back."
+    b "You got a point, but not everybody is Cloudvale High Butchers' running back."
 
     t "Oh..."
 
@@ -248,7 +248,7 @@ label meeting_tyrone:
             if stats.stats["charm"] >= 2:
                 t "<SUCCESS> Damn girl, you're a lucky one."
                 t "You have one right here."
-                b "Im flattered."
+                b "I'm flattered."
             else:
                 t "<FAILURE> Ugh.. I have no idea what are you talking about."
                 b "..."
@@ -262,7 +262,7 @@ label meeting_tyrone:
             "Tyrone seems confused."
         
     t "So you guys are going to Stacy's as well?"
-    b "What else would be doing in a forest this late."
+    b "What else would we be doing in a forest this late."
     t "I have no idea what weird hobbies you guys have."
     "He points at Robert."
     t "Especially this guy."
@@ -275,7 +275,7 @@ label meeting_tyrone:
 
     t "Chill out my dude. There's no reason to be upset you know? Grab this."
 
-    "Tyrone puts keg in Robert's arms."
+    "Tyrone puts the keg in Robert's arms."
 
     t "We're almost there. I think you can manage."
 
@@ -298,16 +298,16 @@ label forest_silhouette:
     show helen normal at left3
     with dissolve
 
-    h "It kinda feels like D&D session if you ask me."
+    h "It kinda feels like a D&D session if you ask me."
 
     show bianca normal at center3
     with dissolve
 
     b "Why?"
 
-    h "You know... Group of characters, recruiting new party members..."
+    h "You know... A group of characters, recruiting new party members..."
 
-    b "Where are the enemies them?"
+    b "Where are enemies then?"
 
     h "They should show up soon. We're probably gonna face some rats sooner or later."
 
@@ -552,7 +552,7 @@ label getting_lost:
     hide helen normal with dissolve
     show bradley normal at right3 with dissolve
 
-    by "Im gonna agree with the big guy here. There is no reason to panic. Just continue walking."
+    by "I'm gonna agree with the big guy here. There is no reason to panic. Just continue walking."
 
     hide bradley normal with dissolve
 

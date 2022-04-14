@@ -1,7 +1,7 @@
 label meeting_bradley:
     scene bg outside with dissolve
 
-    "You lock you house's door and see Bradley in a driveway."
+    "You lock your house's door and see Bradley in the driveway."
 
     
     show bradley normal at right2
@@ -16,7 +16,7 @@ label meeting_bradley:
 
     b "I was worried about you. Really. You are like... the last person on earth to miss school."
 
-    by "I was feeling really sick. But now Im okay."
+    by "I was feeling really sick. But now I'm okay."
 
     b "Well that's a relief."
 
@@ -56,7 +56,7 @@ label meeting_bradley:
             by "That would be cool."
             call increase_fitness from _call_increase_fitness_1
 
-    b "But really. I thought I've already told you that."
+    b "But really. I've thought I told you already."
 
     by "Then I must have forgotten"
 
@@ -114,7 +114,7 @@ label meeting_bradley:
             b "Calling Maggie a toad in like... third grade"
             by "Oh, that was a messy one."
             b "Yeah. That was mean. Didn't knew she had this weird skin disease."
-            b "Gosh... sometimes Im so mean."
+            b "Gosh... sometimes I'm so mean."
             call decrease_empathy from _call_decrease_empathy_1
 
         "Destroying our school project.":

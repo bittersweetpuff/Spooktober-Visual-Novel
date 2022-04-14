@@ -54,11 +54,11 @@ label park_spook:
 
     $ spooks_encountered = spooks_encountered +1
 
-    "All 3 of you start making your way through bushes. However you don't find a source of weird sounds."
+    "All 3 of you start making your way through bushes. However you don't find the source of weird sounds."
 
     h "Let's look around."
 
-    by "I dont think we will find anything here."
+    by "I don't think we will find anything here."
 
     h "Oh, come on. Just keep your eyes open."
 
@@ -139,7 +139,7 @@ label park_spook:
 
 label meeting_robert:
     "As you make your way through the park you hear somebody running through bushes."
-    "Suddenly she jumps out one of the bushes in front of you and crushes into you."
+    "Suddenly he jumps out one of the bushes in front of you and crushes into you."
 
     show robert normal at center1
     with dissolve
@@ -157,8 +157,8 @@ label meeting_robert:
         b "Excuse me? You are the one who crushed into me."
 
         "You should watch out dude.":
-           b "You should be the one watching out dude."
-           r "Oh shut up."
+            b "You should be the one watching out dude."
+            r "Oh shut up."
 
         "<CHARM> Buy me a dinner first.":
             b "You have to buy me a dinner first if you want to go that way."
@@ -201,7 +201,7 @@ label meeting_robert:
 
     r "Dunno. We go to the big school I guess."
 
-    h "Plus he is kind of the loner."
+    h "Plus he is kind of a loner."
 
     r "I prefer a term \"sigma male\""
 

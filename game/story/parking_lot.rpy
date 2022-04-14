@@ -37,7 +37,7 @@ label meeting_helen:
 
     h "What are you guys up to?"
 
-    b "We're going on a party at Stacy's place."
+    b "We're going to the party at Stacy's place."
 
     h "Oh, same here. I was just trying to figure out what's the fastest way there."
 
@@ -63,7 +63,7 @@ label meeting_helen:
         "Good to know.":
             b "That's good to know."
 
-    h "So since we are going on the same party..."
+    h "So since we are going to the same party..."
 
     menu:
         h "Can we all go together."
@@ -172,7 +172,7 @@ label meeting_helen:
     hide bianca normal
     with dissolve
 
-    "You continue walking in silence as you enter park."
+    "You continue walking in silence as you enter the park."
 
     call park_sounds from _call_park_sounds
 

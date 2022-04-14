@@ -1,8 +1,6 @@
 label trap_field:
 
-    "Bradley leeds the way and in spite of being lost, he seems confident about direction he was going."
-
-    "It seems that will to get out of the forest really kicked in."
+    "Bradley leeds the way and in spite of being lost, he seems confident about direction he is going."
 
     "You catch up to him."
 
@@ -57,7 +55,7 @@ label trap_field:
     show bianca normal at center3
     with dissolve
 
-    b "Whats wrong."
+    b "What's wrong."
 
     r "Bear traps."
 
@@ -225,10 +223,10 @@ label trap_field:
     if robert_alive == True:
         b "Okay get up buddy and lets go!"
         hide robert normal with dissolve
-        "You help him stand and slowly you leave bear trap field."
+        "You help him stand and slowly you leave the bear trap field."
         r "Thanks Bianca. Thanks for saving me."
         b "Save it for later."
-        "You meet with the rest of the team and continue looking for way out."
+        "You meet with the rest of the team and continue looking for a way out."
     else:
         b "Robert, listen to me."
         b "I can't open it, the mechanism is messed up."
@@ -262,7 +260,7 @@ label barbwire:
 
     scene bg wire with dissolve
 
-    "Few minutes after leaving a trap field you encounter another obstacle."
+    "Few minutes after leaving the trap field you encounter another obstacle."
 
     show tyrone normal at right2
     with dissolve
@@ -280,7 +278,7 @@ label barbwire:
 
     b "Im afraid we may need to."
 
-    t "What kind of weird torture porn bullshit it is."
+    t "What kind of weird torture porn bullshit is it!"
 
     hide tyrone normal with dissolve
 
@@ -298,7 +296,7 @@ label barbwire:
     show helen normal at right2
     with dissolve
 
-    h "I guess Im next."
+    h "I guess I'm next."
 
     h "Come on Helen... you can do this."
 
@@ -344,7 +342,7 @@ label barbwire:
     show tyrone normal at center1
     with dissolve
 
-    "He start panicking."
+    "He starts panicking."
 
     t "Shit, shit, shit..."
 
@@ -355,12 +353,12 @@ label barbwire:
     menu:
         t "It hurts!"
 
-        "<CHARM> \"Don't worry. Im here. Just slowly come to me.\"":
-            b "Don't worry. Im here. Just slowly come to me."
+        "<CHARM> \"Don't worry. I'm here. Just slowly come to me.\"":
+            b "Don't worry. I'm here. Just slowly come to me."
             "Tyrone lookes at you..."
             if stats.stats["charm"] >= barb_diff:
                 "<SUCCESS> ...and manages to get through."
-                b "Im proud of you big boy."
+                b "I'm proud of you big boy."
                 "In spite of his wounds he smiles."
                 t "Thanks for calming me down Bianca."
                 b "No problem."
@@ -380,12 +378,12 @@ label barbwire:
             menu:
                 b "Tyrone..."
 
-                "<CHARM> \"Don't worry. Im here. Just slowly come to me.\"":
-                    b "Don't worry. Im here. Just slowly come to me."
+                "<CHARM> \"Don't worry. I'm here. Just slowly come to me.\"":
+                    b "Don't worry. I'm here. Just slowly come to me."
                     "Tyrone lookes at you..."
                     if stats.stats["charm"] >= barb_diff:
-                        "<SUCCESS> ...and manages to get through using easier path."
-                        b "Im proud of you big boy."
+                        "<SUCCESS> ...and manages to get through using the easier path."
+                        b "I'm proud of you big boy."
                         "In spite of his wounds he smiles."
                         t "Thanks for calming me down Bianca."
                         b "No problem."
@@ -430,7 +428,7 @@ label bridge:
 
     scene bg river with dissolve
 
-    "Not a long time after making it through a barbed wire fence you hear the sound of running water."
+    "Not a long time after making it through the barbed wire fence you hear the sound of running water."
 
     "You come across a river with a couple of planks that create a primitive bridge."
 
@@ -443,11 +441,11 @@ label bridge:
 
     by "Bianca, take a look."
 
-    "He points at riverbed."
+    "He points at the riverbed."
 
     by "Thats a good 4 meter fall."
 
-    b "Yeah... and current looks strong."
+    b "Yeah... and the current looks strong."
 
     b "We need to be really careful while passing."
 
@@ -458,7 +456,7 @@ label bridge:
     hide bradley normal with dissolve
     hide bianca normal with dissolve
 
-    "You take deep breath and start walking on a bridge."
+    "You take deep breath and start walking on the bridge."
 
     "Wood produces an unsettling sound when you step on it."
 
@@ -491,7 +489,7 @@ label bridge:
         show tyrone normal at right2
         with dissolve
 
-        t "Im done with this shit B."
+        t "I'm done with this shit B."
 
         b "Well I can see that."
 
@@ -510,9 +508,9 @@ label bridge:
 
     by "Watch out Helen. It feels like it's about to snap."
 
-    "Helen, pale as a ghost, starts making her way through bridge."
+    "Helen, pale as a ghost, starts making her way through the bridge."
 
-    "She stops in a middle and starts shaking. Then she gets on all fours."
+    "She stops in the middle and starts shaking. Then she gets on all fours."
 
     hide bianca normal with dissolve
     hide bradley normal with dissolve
@@ -526,7 +524,7 @@ label bridge:
 
     b "Shut up and come here Helen. Don't you dare to panic."
 
-    "You see cracks in planks."
+    "You see cracks in the planks."
 
     define bridge_diff = 4
 
@@ -538,7 +536,7 @@ label bridge:
             menu:
                 "..."
 
-                "<TRICKERY> <LIE> The bridge wont break":
+                "<TRICKERY> <LIE> The bridge won't break":
                     call helen_trickery_check from _call_helen_trickery_check
 
                     menu:
@@ -577,11 +575,11 @@ label bridge:
 
 
     if helen_alive == True:
-        "Both of you are lying on a ground breathing heavily."
+        "Both of you are lying on the ground breathing heavily."
 
         h "That was close."
 
-        b "Lets get out of here."
+        b "Let's get out of here."
 
         b "Yeah"
 
@@ -640,11 +638,11 @@ label come_to_me:
     hide helen normal with dissolve
 
     menu:
-        "Helen jumps to you in a second that bridge snaps under her."
+        "Helen jumps to you in a second that the bridge snaps under her."
 
         "<FITNESS> CATCH HER":
             if stats.stats["fitness"] >= bridge_diff:
-                "<SUCCESS> You grab her hand and pull her on your side of riverbank."
+                "<SUCCESS> You grab her hand and pull her on your side of the riverbank."
             else:
                 "<FAILURE> You miss her hand by couple centimeters."
                 h "Fu...."
